@@ -2,9 +2,20 @@
 <html>
 
 <head>
-  <title>Propeller Craft Physics - William Wu</title>
-  <meta charset="utf-8" />
-  <script type="text/javascript" src="https://livejs.com/live.js"></script>
+  <title>Faster than the Wind - an Animated Explainer - William Wu</title>
+  <meta charset="utf-8">
+  <meta name="twitter:title" content="Faster than the Wind - an Animated Explainer">
+  <meta name="twitter:description"
+    content="Why does a certain propeller car travel faster than the wind? Learn more in this animated, interactive explainer by William Wu.">
+  <meta name="twitter:image" content="https://willy-vvu.github.io/PropellerCarPhysics/thumbs/thumb1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Faster than the Wind - an Animated Explainer">
+  <meta property="og:description"
+    content="Why does a certain propeller car travel faster than the wind? Learn more in this animated, interactive explainer by William Wu.">
+  <meta property="og:image" content="https://willy-vvu.github.io/PropellerCarPhysics/thumbs/thumb1.png">
+  <meta property="og:url" content="https://willy-vvu.github.io/PropellerCarPhysics/">
+
+  <!-- <script type="text/javascript" src="https://livejs.com/live.js"></script> -->
 
   <style>
     @font-face {
@@ -205,9 +216,13 @@
       </defs>
     </svg>
   </p>
-  <h1>Propeller Craft Physics</h1>
-  <p><i>An interactive explainer by William Wu.</i></p>
-  <p>One day, a close friend of mine sent me this video by <a
+  <h1>Faster than the Wind - an Animated Explainer</h1>
+  <p><i>by William Wu</i> &middot; 5 minute read</p>
+  <noscript>
+    <p><b>You will need Javascript enabled to see and interact with these diagrams!</b></p>
+  </noscript>
+  <p id="issues"><b>If you experience issues, please try viewing this site in Chrome or Firefox!</b></p>
+  <p>One day, a close <a href="https://twitter.com/theprakharsahay">friend of mine</a> sent me this video by <a
       href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA">Veritasium:</a></p>
   <p>
     <!-- <div style="display:inline-block;width:560px;height:315px;background-color:#eee;"></div> -->
@@ -1647,7 +1662,8 @@
 
   </p>
   <p>When you pull on the thread, your hand is acting like the wind. The thread should grow shorter and shorter, meaning
-    that the contraption is rolling towards you faster than you can pull!</p>
+    that the contraption is rolling towards you faster than you can pull! In other words, if the contraption were the
+    propeller car, it would be moving faster than the wind that's pushing it.</p>
 
   <p>In summary, <b>it's totally possible for a car to travel faster than the wind without breaking the
       laws of physics.</b> Adding a propeller doesn't magically generate energy. Rather, by attaching
@@ -1660,18 +1676,18 @@
     article feeling like you've learned something.</p>
   <p>– Willy</p>
   <br>
-  <h2>Extra notes for the details hungry</h2>
+  <h2>Extra notes for the physics hungry</h2>
   <p>A disclaimer for those out there who study physics: I'm not a physics major nor did I study aerodynamics, so
     please, if you spot any errors or corrections please contribute to my learning and let me know. With that
     said, I do have a few things to (slightly) formalize and expand on.</p>
 
-  <p>In an mathematically ideal case, mechanical advantage affects two things. Firstly, mechanical advantage affect's a
-    car's theoretical max speed – the lower the MA, the faster the max speed. Secondly, mechanical advantage affects the
-    forces applied to a car. From a standstill, a lower MA results in less force and longer time needed to get up to
-    speed. Now assuming a finite wind speed and a finite mass car, the car can travel infinitely fast as the mechanical
-    advantage approaches zero. At that
-    point, the infinitesimally small force would require waiting infinitely long for the car to get up
-    to such infinite speeds (but it will!).</p>
+  <p>In an mathematically ideal case, mechanical advantage affects two things. Firstly, mechanical
+    advantage affect's a car's theoretical max speed – the lower the MA, the faster the max speed.
+    Secondly, mechanical advantage affects the forces applied to a car. From a standstill, a lower MA
+    results in less force and thus less acceleration and longer time needed to get up to speed. Now
+    assuming a finite wind speed and a finite mass car, the car can travel infinitely fast as the
+    mechanical advantage approaches zero. At that point, the infinitesimally small force would require
+    waiting infinitely long for the car to get up to such infinite speeds (but it will!).</p>
 
   <p>In the practical case, lowering mechanical advantage does help us go faster... up to a point.
     Even from a standstill, there will be static/kinetic friction caused by the wheels, belt drive,
@@ -1704,11 +1720,15 @@
   <p>I wish I had the expertise to plot out this graph, but I would imagine it looks similar to torque charts for
     gearboxes. If you speed up while biking, it's important to change gears so that you can continue to pedal
     comfortably – by changing the gearing, you're changing the mechanical advantage to maintain a sweet spot between
-    force, top speed, and drag. Swap your leg power out for the wind power and you have yourself a propeller car.
-    Whether or not it can travel faster than the wind depends on how well you can manage your MA.</p>
+    force, top speed, and drag. Most of this we do intuitively, until it feels right.</p>
+  <p>
+  <div style="text-align: center;">&blacksquare;</div>
+  </p>
 </body>
 <script>
-
+  if (navigator.userAgent.indexOf("Chrome") !== -1 || navigator.userAgent.indexOf("Firefox") !== -1) {
+    document.getElementById("issues").style.display = "none"
+  }
   class HeroContainerAnimation {
     constructor() {
       this.$elem = document.body.querySelector("#HeroAnimated")
