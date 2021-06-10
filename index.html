@@ -1821,8 +1821,8 @@
   const windCar1Interactive = new WindCar1Interactive()
   const sailCarInteractive = new SailCarInteractive()
 
-  sailCarInteractive.$elem.onmousemove =
-    windCar1Interactive.$elem.onmousemove =
+  sailCarInteractive.$elem.onpointermove =
+    windCar1Interactive.$elem.onpointermove =
     (event) => {
       sailCarInteractive.setAnimationProgress(event.offsetX / 720)
       windCar1Interactive.setAnimationProgress(event.offsetX / 720)
@@ -1876,10 +1876,10 @@
     }
   }
   const couplingAnimation = new CouplingAnimation()
-  couplingAnimation.$elem.onmouseenter = () => {
+  couplingAnimation.$elem.onpointerenter = () => {
     couplingAnimation.playAnimation()
   }
-  couplingAnimation.$elem.onmouseleave = () => {
+  couplingAnimation.$elem.onpointerleave = () => {
     couplingAnimation.pauseAnimation()
   }
 
@@ -1933,10 +1933,10 @@
     }
   }
   const propellorToWindWheelAnimation = new PropellorToWindWheelAnimation()
-  propellorToWindWheelAnimation.$elem.onmouseenter = () => {
+  propellorToWindWheelAnimation.$elem.onpointerenter = () => {
     propellorToWindWheelAnimation.playAnimation()
   }
-  propellorToWindWheelAnimation.$elem.onmouseleave = () => {
+  propellorToWindWheelAnimation.$elem.onpointerleave = () => {
     propellorToWindWheelAnimation.pauseAnimation()
   }
 
@@ -1962,7 +1962,7 @@
   }
 
   const windWheelCarInteractive = new WindWheelCarInteractive()
-  windWheelCarInteractive.$elem.onmousemove =
+  windWheelCarInteractive.$elem.onpointermove =
     (event) => {
       windWheelCarInteractive.setAnimationProgress(event.offsetX / 720)
     }
@@ -2000,7 +2000,7 @@
   }
 
   const windWheelCarCloseupInteractive = new WindWheelCarCloseupInteractive()
-  windWheelCarCloseupInteractive.$elem.onmousemove =
+  windWheelCarCloseupInteractive.$elem.onpointermove =
     (event) => {
       windWheelCarCloseupInteractive.setAnimationProgress(event.offsetX / 720)
     }
@@ -2021,7 +2021,7 @@
   }
 
   const pulley1Interactive = new Pulley1Interactive()
-  pulley1Interactive.$elem.onmousemove =
+  pulley1Interactive.$elem.onpointermove =
     (event) => {
       pulley1Interactive.setAnimationProgress(event.offsetX / 720)
     }
@@ -2046,7 +2046,7 @@
   }
 
   const gear1Interactive = new Gear1Interactive()
-  gear1Interactive.$elem.onmousemove =
+  gear1Interactive.$elem.onpointermove =
     (event) => {
       gear1Interactive.setAnimationProgress(event.offsetX / 720)
     }*/
@@ -2073,7 +2073,7 @@
   }
 
   const windWheelCar2Interactive = new WindWheelCar2Interactive()
-  windWheelCar2Interactive.$elem.onmousemove =
+  windWheelCar2Interactive.$elem.onpointermove =
     (event) => {
       windWheelCar2Interactive.setAnimationProgress(event.offsetX / 720)
     }
@@ -2111,7 +2111,7 @@
   }
 
   const windWheelCar2CloseupInteractive = new WindWheelCar2CloseupInteractive()
-  windWheelCar2CloseupInteractive.$elem.onmousemove =
+  windWheelCar2CloseupInteractive.$elem.onpointermove =
     (event) => {
       windWheelCar2CloseupInteractive.setAnimationProgress(event.offsetX / 720)
     }
@@ -2132,7 +2132,7 @@
   }
 
   const pulley2Interactive = new Pulley2Interactive()
-  pulley2Interactive.$elem.onmousemove =
+  pulley2Interactive.$elem.onpointermove =
     (event) => {
       pulley2Interactive.setAnimationProgress(event.offsetX / 720)
     }
@@ -2158,7 +2158,7 @@ class Gear2Interactive {
 }
 
 const gear2Interactive = new Gear2Interactive()
-gear2Interactive.$elem.onmousemove =
+gear2Interactive.$elem.onpointermove =
   (event) => {
     gear2Interactive.setAnimationProgress(event.offsetX / 720)
   }
@@ -2185,7 +2185,7 @@ gear2Interactive.$elem.onmousemove =
   }
 
   const diyInteractive = new DiyInteractive()
-  diyInteractive.$elem.onmousemove =
+  diyInteractive.$elem.onpointermove =
     (event) => {
       diyInteractive.setAnimationProgress(event.offsetX / 720)
     }
